@@ -16,7 +16,8 @@ img {
   display: grid;
   grid-template-areas:
   "hero hero ct1"
-  "hero hero ct2"
+  "hero hero ct2";
+  grid-gap:20px;
 }
 
 .hero {
@@ -26,20 +27,40 @@ img {
   background-size:cover;
   background-position: bottom right;
   padding:50px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 
 }
-.hero h1{
-  align-self: end;
-  justify-self: start;
+.hero > * {
   background: var(--yellow);
 }
 
-.hero p{
-  align-self: start;
-  justify-self: start;
-  background: var(--yellow);
+.cta {
+    background: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta .price {
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 90;
+  color:red;
+}
+
+.cta p:nth-child(2) {
+  font-size: 15px;
+  font-weight: bold;
+
+}
+
+.cta p{
+  margin:0;
 }
 
 .ct1 {
@@ -48,4 +69,10 @@ img {
 
 .ct2 {
   grid-area: ct2;
+}
+
+/* Navigation*/
+
+.menu {
+
 }
